@@ -1,3 +1,5 @@
+package TicTacToe;
+
 /**
  * Enumeration for the different states of the Tic-Tac-Toe game.
  * This enum is used to track the current state of the game.
