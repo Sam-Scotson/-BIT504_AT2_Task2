@@ -1,3 +1,4 @@
+package TicTacToe;
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Graphics;
@@ -11,15 +12,10 @@ public class Cell {
 	
 	/** Constructor to initialise this cell with the specified row and col */
 	public Cell(int row, int col) {
-		
-		// TODO: Initialise the variables row, col 
-
-		
-		
-		//TODO: call the method that sets the cell content to EMPTY
-		 
+		this.row = row; // Initializes the row
+		this.col = col; // Initializes the col
+		clear(); // This method sets the cell content to EMPTY
 	}
-	
 
 	/** Paint itself on the graphics canvas, given the Graphics context g */ 
 	public void paint(Graphics g) {
@@ -42,12 +38,12 @@ public class Cell {
 		}
 	}
 	
-	/** Set this cell's content to EMPTY */
+	/*
+	* Set this cell's content to EMPTY.
+	* This method provides a straightforward solution to resetting the cell's state.
+	* It effectively prepares the cell for a new game or a new move.
+	*/
 	public void clear() {
-		
-		// TODO: Set the value of content to Empty (Remember this is an enum)
-
-		
+		content = Player.Empty;
 	}
-		
 }
