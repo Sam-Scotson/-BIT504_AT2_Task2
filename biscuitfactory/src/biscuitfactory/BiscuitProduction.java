@@ -4,6 +4,7 @@ public class BiscuitProduction {
     private static BiscuitProduction instance = null;
     private static int biscuitSize;
     private static int productionSpeed;
+    private static int chocolatechipAmount; // New variable for chocolate chips per biscuit
 
     // Private constructor to prevent instantiation
     private BiscuitProduction() {
@@ -33,5 +34,14 @@ public class BiscuitProduction {
 
     public static void setProductionSpeed(int productionSpeed) {
         BiscuitProduction.productionSpeed = productionSpeed;
+    }
+
+    // Getter and setter for chocolatechipAmount
+    public static int getChocolatechipAmount() {
+        return chocolatechipAmount;
+    }
+
+    public static void setChocolatechipAmount(int chocolatechipAmount) {
+        BiscuitProduction.chocolatechipAmount = chocolatechipAmount;
     }
 }

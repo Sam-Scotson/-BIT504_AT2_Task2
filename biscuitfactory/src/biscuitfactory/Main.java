@@ -9,5 +9,9 @@ public class Main {
         // Setting amount of biscuits produced per minute
         BiscuitProduction.setProductionSpeed(1200);
         System.out.println("Current biscuits produced per minute: " + BiscuitProduction.getProductionSpeed());
+
+        // Setting amount of chocolate chips per biscuit
+        BiscuitProduction.setChocolatechipAmount(10);
+        System.out.println("Current chocolate chips per biscuit: " + BiscuitProduction.getChocolatechipAmount());
     }
 }
