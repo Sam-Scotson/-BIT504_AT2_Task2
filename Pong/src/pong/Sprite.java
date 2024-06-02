@@ -1,7 +1,7 @@
 package pong;
 
 import java.awt.Color;
-import java.awt.Rectangle
+import java.awt.Rectangle;
 
 public class Sprite {
     private int xPosition, yPosition;
