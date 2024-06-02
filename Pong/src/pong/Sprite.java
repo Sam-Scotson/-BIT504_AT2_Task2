@@ -1,12 +1,25 @@
 package pong;
 
 import java.awt.Color;
+import java.awt.Rectangle
 
 public class Sprite {
     private int xPosition, yPosition;
     private int xVelocity, yVelocity;
     private int width, height;
+    private int initialXPosition;
+    private int initialYPosition;
     private Color colour;
+
+    public void setInitialPosition(int initialX, int initialY) {
+        initialXPosition = initialX;
+        initialYPosition = initialY;
+    }
+
+    public void resetToInitialPosition() {
+        setXPosition(initialXPosition);
+        setYPosition(initialYPosition);
+    }
 
     public int getXPosition() {
         return xPosition;
@@ -15,7 +28,7 @@ public class Sprite {
     public int getYPosition() {
         return yPosition;
     }
-    
+
     public void setXPosition(int xPosition) {
         this.xPosition = xPosition;
     }
@@ -24,13 +37,18 @@ public class Sprite {
         this.yPosition = yPosition;
     }
 
-     public void setXPosition(int newX, int panelWidth) {
-        xPosition = newX;
+    public void setXPosition(int newX, int panelWidth) {
+        if (newX >= 0 && newX + width <= panelWidth) {
+            xPosition = newX;
+        }
     }
-     
-     public void setYPosition(int newY, int panelWidth) {
-         yPosition = newY;
-     }
+
+    public void setYPosition(int newY, int panelHeight) {
+        if (newY >= 0 && newY + height <= panelHeight) {
+            yPosition = newY;
+        }
+    }
+
     public int getXVelocity() {
         return xVelocity;
     }
@@ -70,4 +88,8 @@ public class Sprite {
     public void setColour(Color colour) {
         this.colour = colour;
     }
+    
+    public Rectangle getRectangle() {
+         return new Rectangle(getXPosition(), getYPosition(), getWidth(), getHeight());
+   }
 }
