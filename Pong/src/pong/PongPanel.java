@@ -79,11 +79,7 @@ public class PongPanel extends JPanel implements ActionListener, KeyListener {
         g.drawString(leftScore, xPadding, yPadding);
         g.drawString(rightScore, getWidth() - xPadding, yPadding);
     }
-  
-    private void drawString() {
-		// TODO Auto-generated method stub
-		
-	}
+
 
 	@Override
       public void paintComponent(Graphics g) {
